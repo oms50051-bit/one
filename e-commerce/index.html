@@ -1,0 +1,1841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    
+
+
+      <header class="header">
+
+        <a href="#" class="logo">
+            Old<span>fashion</span>
+        </a>
+
+        <div class="search-box">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input type="text" id="searchInput" placeholder="Search products...">
+
+        </div>
+
+        <div class="header-actions">
+
+            <button id="themeBtn" class="icon-btn">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+
+            <button id="wishlistBtn" class="icon-btn">
+                <i class="fa-regular fa-heart"></i>
+                <b id="wishlistCount">0</b>
+            </button>
+
+            <button id="cartBtn" class="cart-btn">
+
+                <i class="fa-solid fa-bag-shopping"></i>
+
+                <span>Cart</span>
+
+                <b id="cartCount">0</b>
+
+            </button>
+
+            <button id="menuBtn" class="menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+        </div>
+
+    </header>
+
+
+     <nav class="navbar" id="navbar">
+
+        <a href="#" class="active">Home</a>
+        <a href="#products">Shop</a>
+        <a href="#categories">Categories</a>
+        <a href="#deals">Deals</a>
+        <a href="#footer">Contact</a>
+
+    </nav>
+
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <span class="hero-label">
+                    NEW COLLECTION 2026
+                </span>
+
+                <h1>
+                    Shop smarter.
+                    <span>Live better.</span>
+                </h1>
+
+                <p>
+                    Discover premium products, modern essentials
+                    and exclusive deals — all in one place.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#products" class="btn">
+                        Shop Now
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                    <a href="#deals" class="btn btn-light">
+                        Explore Deals
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-visual">
+
+                <div class="hero-card hero-card-main">
+
+                    <div class="product-shape">
+                        <i class="fa-solid fa-headphones"></i>
+                    </div>
+
+                    <div class="hero-product-info">
+
+                        <span>Trending</span>
+
+                        <h3>Premium Audio</h3>
+
+                        <strong>₹2,499</strong>
+
+                    </div>
+
+                </div>
+
+                <div class="floating-badge badge-top">
+                    <i class="fa-solid fa-bolt"></i>
+                    Flash Sale
+                </div>
+
+                <div class="floating-badge badge-bottom">
+                    ⭐ 4.9 Rating
+                </div>
+
+            </div>
+
+        </section>
+
+          <section class="categories-section" id="categories">
+
+            <div class="section-heading">
+
+                <div>
+                    <span>EXPLORE</span>
+
+                    <h2>Shop by category</h2>
+                </div>
+
+            </div>
+
+
+            <div class="categories">
+
+                <button class="category-card active" data-category="all">
+
+                    <i class="fa-solid fa-border-all"></i>
+
+                    <span>All</span>
+
+                </button>
+
+
+                <button class="category-card" data-category="electronics">
+
+                    <i class="fa-solid fa-laptop"></i>
+
+                    <span>Electronics</span>
+
+                </button>
+
+
+                <button class="category-card" data-category="fashion">
+
+                    <i class="fa-solid fa-shirt"></i>
+
+                    <span>Fashion</span>
+
+                </button>
+
+
+                <button class="category-card" data-category="shoes">
+
+                    <i class="fa-solid fa-shoe-prints"></i>
+
+                    <span>Shoes</span>
+
+                </button>
+
+
+                <button class="category-card" data-category="accessories">
+
+                    <i class="fa-solid fa-watch"></i>
+
+                    <span>Accessories</span>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+           <section class="products-section" id="products">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span>OUR COLLECTION</span>
+
+                    <h2>Featured products</h2>
+
+                </div>
+
+
+                <select id="sortSelect">
+
+                    <option value="default">
+                        Sort by
+                    </option>
+
+                    <option value="low">
+                        Price: Low to High
+                    </option>
+
+                    <option value="high">
+                        Price: High to Low
+                    </option>
+
+                    <option value="rating">
+                        Highest Rated
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="products-grid" id="productsGrid"></div>
+
+
+            <div class="empty-state" id="emptyState">
+
+                <i class="fa-solid fa-box-open"></i>
+
+                <h3>No products found</h3>
+
+                <p>
+                    Try another search or category.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section class="deal-section" id="deals">
+
+            <div class="deal-content">
+
+                <span>LIMITED TIME OFFER</span>
+
+                <h2>
+                    Up to
+                    <strong>50% OFF</strong>
+                </h2>
+
+                <p>
+                    Grab your favorite products before
+                    the offer ends.
+                </p>
+
+                <a href="#products" class="btn">
+                    Shop Deals
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+
+            <div class="deal-timer">
+
+                <div>
+                    <strong id="days">00</strong>
+                    <span>Days</span>
+                </div>
+
+                <div>
+                    <strong id="hours">00</strong>
+                    <span>Hours</span>
+                </div>
+
+                <div>
+                    <strong id="minutes">00</strong>
+                    <span>Minutes</span>
+                </div>
+
+                <div>
+                    <strong id="seconds">00</strong>
+                    <span>Seconds</span>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+      <div class="overlay" id="overlay"></div>
+
+    <aside class="cart-drawer" id="cartDrawer">
+
+        <div class="cart-header">
+
+            <div>
+                <span>YOUR BAG</span>
+                <h2>Shopping Cart</h2>
+            </div>
+
+            <button id="closeCart">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+
+        <div class="cart-items" id="cartItems"></div>
+
+
+        <div class="cart-empty" id="cartEmpty">
+
+            <i class="fa-solid fa-bag-shopping"></i>
+
+            <h3>Your cart is empty</h3>
+
+            <p>
+                Add something you love.
+            </p>
+
+        </div>
+
+
+        <div class="cart-footer">
+
+            <div class="subtotal">
+
+                <span>Subtotal</span>
+
+                <strong id="subtotal">
+                    ₹0
+                </strong>
+
+            </div>
+
+            <button class="checkout-btn">
+                Proceed to Checkout
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <div class="modal" id="productModal">
+
+        <div class="modal-box">
+
+            <button class="modal-close" id="modalClose">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+
+            <div class="modal-image" id="modalImage"></div>
+
+
+            <div class="modal-info">
+
+                <span id="modalCategory">
+                    CATEGORY
+                </span>
+
+                <h2 id="modalTitle">
+                    Product
+                </h2>
+
+                <div class="modal-rating">
+
+                    <span id="modalRating">
+                        ⭐ 4.5
+                    </span>
+
+                    <small>
+                        Customer rating
+                    </small>
+
+                </div>
+
+                <p id="modalDescription">
+                    Product description.
+                </p>
+
+                <strong class="modal-price" id="modalPrice">
+                    ₹0
+                </strong>
+
+
+                <div class="modal-actions">
+
+                    <button class="btn" id="modalAddCart">
+                        Add to Cart
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </button>
+
+                    <button class="wishlist-large" id="modalWishlist">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <footer id="footer">
+
+        <div class="footer-main">
+
+            <div class="footer-brand">
+
+                <a href="#" class="logo">
+                    Profi<span>Shop</span>
+                </a>
+
+                <p>
+                    Modern shopping for modern lifestyles.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h4>Shop</h4>
+
+                <a href="#products">All Products</a>
+                <a href="#categories">Categories</a>
+                <a href="#deals">Deals</a>
+
+            </div>
+
+
+            <div>
+
+                <h4>Help</h4>
+
+                <a href="#">Shipping</a>
+                <a href="#">Returns</a>
+                <a href="#">Support</a>
+
+            </div>
+
+
+            <div>
+
+                <h4>Follow</h4>
+
+                <div class="footer-social">
+
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 ProfiShop
+            </span>
+
+            <span>
+                Built with HTML, CSS & JavaScript
+            </span>
+
+        </div>
+
+    </footer>
+
+
+
+
+
+    <script>
+
+        /* =========================================
+   PROFISHOP JAVASCRIPT
+========================================= */
+
+
+        /* ================= PRODUCTS ================= */
+
+        const products = [
+
+            {
+                id: 1,
+                name: "AirSound Pro Headphones",
+                category: "electronics",
+                price: 2499,
+                rating: 4.9,
+                discount: 25,
+                icon: "fa-headphones",
+                description:
+                    "Premium wireless headphones with immersive sound, comfortable ear cushions and long battery life."
+            },
+
+            {
+                id: 2,
+                name: "UltraBook Laptop",
+                category: "electronics",
+                price: 54999,
+                rating: 4.8,
+                discount: 15,
+                icon: "fa-laptop",
+                description:
+                    "Slim and powerful laptop designed for productivity, development and everyday professional use."
+            },
+
+            {
+                id: 3,
+                name: "Smart Watch X",
+                category: "accessories",
+                price: 3999,
+                rating: 4.6,
+                discount: 30,
+                icon: "fa-watch",
+                description:
+                    "Modern smartwatch with fitness tracking, notifications and a premium display."
+            },
+
+            {
+                id: 4,
+                name: "Urban Classic T-Shirt",
+                category: "fashion",
+                price: 799,
+                rating: 4.5,
+                discount: 20,
+                icon: "fa-shirt",
+                description:
+                    "Minimal everyday t-shirt made for comfort, style and casual wear."
+            },
+
+            {
+                id: 5,
+                name: "Runner Max Shoes",
+                category: "shoes",
+                price: 2299,
+                rating: 4.7,
+                discount: 35,
+                icon: "fa-shoe-prints",
+                description:
+                    "Lightweight running shoes with responsive cushioning and breathable construction."
+            },
+
+            {
+                id: 6,
+                name: "Wireless Keyboard",
+                category: "electronics",
+                price: 1499,
+                rating: 4.4,
+                discount: 10,
+                icon: "fa-keyboard",
+                description:
+                    "Compact wireless keyboard with comfortable keys and a clean minimalist design."
+            },
+
+            {
+                id: 7,
+                name: "Classic Sunglasses",
+                category: "accessories",
+                price: 999,
+                rating: 4.3,
+                discount: 20,
+                icon: "fa-glasses",
+                description:
+                    "Classic sunglasses with a lightweight frame and timeless design."
+            },
+
+            {
+                id: 8,
+                name: "Premium Hoodie",
+                category: "fashion",
+                price: 1799,
+                rating: 4.8,
+                discount: 25,
+                icon: "fa-shirt",
+                description:
+                    "Premium soft hoodie designed for everyday comfort and modern streetwear."
+            }
+
+        ];
+
+
+        /* ================= STATE ================= */
+
+        let cart =
+            JSON.parse(
+                localStorage.getItem("profishop-cart")
+            ) || [];
+
+        let wishlist =
+            JSON.parse(
+                localStorage.getItem("profishop-wishlist")
+            ) || [];
+
+        let currentCategory = "all";
+
+        let currentSearch = "";
+
+        let selectedProduct = null;
+
+
+        /* ================= ELEMENTS ================= */
+
+        const productsGrid =
+            document.getElementById("productsGrid");
+
+        const emptyState =
+            document.getElementById("emptyState");
+
+        const searchInput =
+            document.getElementById("searchInput");
+
+        const sortSelect =
+            document.getElementById("sortSelect");
+
+        const cartBtn =
+            document.getElementById("cartBtn");
+
+        const cartDrawer =
+            document.getElementById("cartDrawer");
+
+        const closeCart =
+            document.getElementById("closeCart");
+
+        const overlay =
+            document.getElementById("overlay");
+
+        const cartItems =
+            document.getElementById("cartItems");
+
+        const cartEmpty =
+            document.getElementById("cartEmpty");
+
+        const cartCount =
+            document.getElementById("cartCount");
+
+        const wishlistCount =
+            document.getElementById("wishlistCount");
+
+        const subtotal =
+            document.getElementById("subtotal");
+
+        const themeBtn =
+            document.getElementById("themeBtn");
+
+        const menuBtn =
+            document.getElementById("menuBtn");
+
+        const navbar =
+            document.getElementById("navbar");
+
+        const modal =
+            document.getElementById("productModal");
+
+        const modalClose =
+            document.getElementById("modalClose");
+
+        const modalImage =
+            document.getElementById("modalImage");
+
+        const modalTitle =
+            document.getElementById("modalTitle");
+
+        const modalCategory =
+            document.getElementById("modalCategory");
+
+        const modalRating =
+            document.getElementById("modalRating");
+
+        const modalDescription =
+            document.getElementById("modalDescription");
+
+        const modalPrice =
+            document.getElementById("modalPrice");
+
+        const modalAddCart =
+            document.getElementById("modalAddCart");
+
+        const modalWishlist =
+            document.getElementById("modalWishlist");
+
+
+        /* ================= FORMAT PRICE ================= */
+
+        function formatPrice(price) {
+
+            return new Intl.NumberFormat(
+                "en-IN",
+                {
+                    style: "currency",
+                    currency: "INR",
+                    maximumFractionDigits: 0
+                }
+            ).format(price);
+
+        }
+
+
+        /* ================= RENDER PRODUCTS ================= */
+
+        function renderProducts() {
+
+            let filtered =
+                products.filter(product => {
+
+                    const categoryMatch =
+                        currentCategory === "all" ||
+                        product.category === currentCategory;
+
+                    const searchMatch =
+                        product.name
+                            .toLowerCase()
+                            .includes(
+                                currentSearch.toLowerCase()
+                            );
+
+                    return categoryMatch && searchMatch;
+
+                });
+
+
+            /* Sorting */
+
+            const sort =
+                sortSelect.value;
+
+            if (sort === "low") {
+
+                filtered.sort(
+                    (a, b) => a.price - b.price
+                );
+
+            }
+
+            if (sort === "high") {
+
+                filtered.sort(
+                    (a, b) => b.price - a.price
+                );
+
+            }
+
+            if (sort === "rating") {
+
+                filtered.sort(
+                    (a, b) => b.rating - a.rating
+                );
+
+            }
+
+
+            productsGrid.innerHTML = "";
+
+
+            if (filtered.length === 0) {
+
+                emptyState.style.display =
+                    "block";
+
+                return;
+
+            }
+
+
+            emptyState.style.display =
+                "none";
+
+
+            filtered.forEach(product => {
+
+                const isWishlisted =
+                    wishlist.includes(product.id);
+
+
+                const card =
+                    document.createElement("article");
+
+                card.className =
+                    "product-card";
+
+
+                card.innerHTML = `
+
+            <div
+                class="product-image"
+                data-product="${product.id}"
+            >
+
+                <span class="discount">
+                    -${product.discount}%
+                </span>
+
+                <button
+                    class="wishlist ${isWishlisted ? "active" : ""
+                    }"
+                    data-wishlist="${product.id}"
+                >
+                    <i class="${isWishlisted
+                        ? "fa-solid"
+                        : "fa-regular"
+                    } fa-heart"></i>
+                </button>
+
+                <i class="fa-solid ${product.icon}"></i>
+
+            </div>
+
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    ${product.category.toUpperCase()}
+                </span>
+
+                <h3>
+                    ${product.name}
+                </h3>
+
+                <div class="product-rating">
+
+                    ${stars(product.rating)}
+
+                    <span>
+                        ${product.rating}
+                    </span>
+
+                </div>
+
+
+                <div class="product-bottom">
+
+                    <strong class="product-price">
+                        ${formatPrice(product.price)}
+                    </strong>
+
+                    <button
+                        class="add-btn"
+                        data-add="${product.id}"
+                        title="Add to cart"
+                    >
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+        `;
+
+
+                productsGrid.appendChild(card);
+
+            });
+
+        }
+
+
+        /* ================= STARS ================= */
+
+        function stars(rating) {
+
+            let result = "";
+
+            const rounded =
+                Math.round(rating);
+
+            for (
+                let i = 1;
+                i <= 5;
+                i++
+            ) {
+
+                result +=
+                    i <= rounded
+                        ? "★"
+                        : "☆";
+
+            }
+
+            return result;
+
+        }
+
+
+        /* ================= PRODUCT EVENTS ================= */
+
+        productsGrid.addEventListener(
+            "click",
+            event => {
+
+                const wishlistButton =
+                    event.target.closest(
+                        "[data-wishlist]"
+                    );
+
+
+                if (wishlistButton) {
+
+                    event.stopPropagation();
+
+                    toggleWishlist(
+                        Number(
+                            wishlistButton.dataset.wishlist
+                        )
+                    );
+
+                    return;
+
+                }
+
+
+                const addButton =
+                    event.target.closest(
+                        "[data-add]"
+                    );
+
+
+                if (addButton) {
+
+                    addToCart(
+                        Number(
+                            addButton.dataset.add
+                        )
+                    );
+
+                    return;
+
+                }
+
+
+                const productArea =
+                    event.target.closest(
+                        "[data-product]"
+                    );
+
+
+                if (productArea) {
+
+                    openProduct(
+                        Number(
+                            productArea.dataset.product
+                        )
+                    );
+
+                }
+
+            }
+        );
+
+
+        /* ================= CATEGORY ================= */
+
+        document.querySelectorAll(
+            ".category-card"
+        ).forEach(button => {
+
+            button.addEventListener(
+                "click",
+                () => {
+
+                    document.querySelectorAll(
+                        ".category-card"
+                    ).forEach(item => {
+
+                        item.classList.remove(
+                            "active"
+                        );
+
+                    });
+
+                    button.classList.add("active");
+
+                    currentCategory =
+                        button.dataset.category;
+
+                    renderProducts();
+
+                }
+            );
+
+        });
+
+
+        /* ================= SEARCH ================= */
+
+        searchInput.addEventListener(
+            "input",
+            event => {
+
+                currentSearch =
+                    event.target.value;
+
+                renderProducts();
+
+            }
+        );
+
+
+        /* ================= SORT ================= */
+
+        sortSelect.addEventListener(
+            "change",
+            renderProducts
+        );
+
+
+        /* ================= CART ================= */
+
+        function addToCart(id) {
+
+            const product =
+                products.find(
+                    item => item.id === id
+                );
+
+            const existing =
+                cart.find(
+                    item => item.id === id
+                );
+
+
+            if (existing) {
+
+                existing.quantity++;
+
+            } else {
+
+                cart.push({
+
+                    id: product.id,
+
+                    quantity: 1
+
+                });
+
+            }
+
+
+            saveCart();
+
+            updateCart();
+
+            openCart();
+
+        }
+
+
+        function saveCart() {
+
+            localStorage.setItem(
+                "profishop-cart",
+                JSON.stringify(cart)
+            );
+
+        }
+
+
+        function updateCart() {
+
+            cartItems.innerHTML = "";
+
+            let total = 0;
+
+            let count = 0;
+
+
+            cart.forEach(item => {
+
+                const product =
+                    products.find(
+                        p => p.id === item.id
+                    );
+
+
+                if (!product) return;
+
+
+                total +=
+                    product.price *
+                    item.quantity;
+
+                count += item.quantity;
+
+
+                const element =
+                    document.createElement("div");
+
+                element.className =
+                    "cart-item";
+
+
+                element.innerHTML = `
+
+            <div class="cart-item-image">
+
+                <i class="
+                    fa-solid
+                    ${product.icon}
+                "></i>
+
+            </div>
+
+
+            <div>
+
+                <h4>
+                    ${product.name}
+                </h4>
+
+                <div class="cart-item-price">
+
+                    ${formatPrice(product.price)}
+
+                </div>
+
+
+                <div class="quantity">
+
+                    <button
+                        data-minus="${product.id}"
+                    >
+                        −
+                    </button>
+
+                    <span>
+                        ${item.quantity}
+                    </span>
+
+                    <button
+                        data-plus="${product.id}"
+                    >
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="remove-item"
+                data-remove="${product.id}"
+            >
+
+                <i class="fa-solid fa-trash"></i>
+
+            </button>
+
+        `;
+
+
+                cartItems.appendChild(element);
+
+            });
+
+
+            cartCount.textContent =
+                count;
+
+            subtotal.textContent =
+                formatPrice(total);
+
+
+            if (cart.length === 0) {
+
+                cartEmpty.style.display =
+                    "block";
+
+            } else {
+
+                cartEmpty.style.display =
+                    "none";
+
+            }
+
+        }
+
+
+        /* Cart controls */
+
+        cartItems.addEventListener(
+            "click",
+            event => {
+
+                const plus =
+                    event.target.closest(
+                        "[data-plus]"
+                    );
+
+                const minus =
+                    event.target.closest(
+                        "[data-minus]"
+                    );
+
+                const remove =
+                    event.target.closest(
+                        "[data-remove]"
+                    );
+
+
+                if (plus) {
+
+                    changeQuantity(
+                        Number(plus.dataset.plus),
+                        1
+                    );
+
+                }
+
+
+                if (minus) {
+
+                    changeQuantity(
+                        Number(minus.dataset.minus),
+                        -1
+                    );
+
+                }
+
+
+                if (remove) {
+
+                    removeFromCart(
+                        Number(remove.dataset.remove)
+                    );
+
+                }
+
+            }
+        );
+
+
+        function changeQuantity(
+            id,
+            change
+        ) {
+
+            const item =
+                cart.find(
+                    item => item.id === id
+                );
+
+            if (!item) return;
+
+            item.quantity += change;
+
+
+            if (item.quantity <= 0) {
+
+                cart =
+                    cart.filter(
+                        item => item.id !== id
+                    );
+
+            }
+
+
+            saveCart();
+
+            updateCart();
+
+        }
+
+
+        function removeFromCart(id) {
+
+            cart =
+                cart.filter(
+                    item => item.id !== id
+                );
+
+            saveCart();
+
+            updateCart();
+
+        }
+
+
+        /* ================= CART DRAWER ================= */
+
+        function openCart() {
+
+            cartDrawer.classList.add("active");
+
+            overlay.classList.add("active");
+
+            document.body.style.overflow =
+                "hidden";
+
+        }
+
+
+        function closeCartDrawer() {
+
+            cartDrawer.classList.remove(
+                "active"
+            );
+
+            overlay.classList.remove(
+                "active"
+            );
+
+            document.body.style.overflow =
+                "";
+
+        }
+
+
+        cartBtn.addEventListener(
+            "click",
+            openCart
+        );
+
+        closeCart.addEventListener(
+            "click",
+            closeCartDrawer
+        );
+
+        overlay.addEventListener(
+            "click",
+            closeCartDrawer
+        );
+
+
+        /* ================= WISHLIST ================= */
+
+        function toggleWishlist(id) {
+
+            if (wishlist.includes(id)) {
+
+                wishlist =
+                    wishlist.filter(
+                        item => item !== id
+                    );
+
+            } else {
+
+                wishlist.push(id);
+
+            }
+
+
+            localStorage.setItem(
+                "profishop-wishlist",
+                JSON.stringify(wishlist)
+            );
+
+
+            wishlistCount.textContent =
+                wishlist.length;
+
+
+            renderProducts();
+
+        }
+
+
+        /* Wishlist header */
+
+        document.getElementById(
+            "wishlistBtn"
+        ).addEventListener(
+            "click",
+            () => {
+
+                if (wishlist.length === 0) {
+
+                    alert(
+                        "Your wishlist is empty."
+                    );
+
+                    return;
+
+                }
+
+
+                currentSearch = "";
+
+                searchInput.value = "";
+
+                currentCategory = "all";
+
+
+                const wishProducts =
+                    products.filter(
+                        product =>
+                            wishlist.includes(
+                                product.id
+                            )
+                    );
+
+
+                productsGrid.innerHTML = "";
+
+
+                wishProducts.forEach(
+                    product => {
+
+                        const card =
+                            document.createElement(
+                                "article"
+                            );
+
+                        card.className =
+                            "product-card";
+
+
+                        card.innerHTML = `
+
+                    <div
+                        class="product-image"
+                        data-product="${product.id}"
+                    >
+
+                        <button
+                            class="wishlist active"
+                            data-wishlist="${product.id}"
+                        >
+                            <i class="
+                                fa-solid
+                                fa-heart
+                            "></i>
+                        </button>
+
+                        <i class="
+                            fa-solid
+                            ${product.icon}
+                        "></i>
+
+                    </div>
+
+
+                    <div class="product-info">
+
+                        <span class="product-category">
+                            ${product.category.toUpperCase()}
+                        </span>
+
+                        <h3>
+                            ${product.name}
+                        </h3>
+
+                        <div class="product-rating">
+                            ${stars(product.rating)}
+                        </div>
+
+                        <div class="product-bottom">
+
+                            <strong class="product-price">
+                                ${formatPrice(product.price)}
+                            </strong>
+
+                            <button
+                                class="add-btn"
+                                data-add="${product.id}"
+                            >
+                                <i class="
+                                    fa-solid
+                                    fa-plus
+                                "></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                `;
+
+
+                        productsGrid.appendChild(card);
+
+                    }
+                );
+
+            }
+        );
+
+
+        /* ================= PRODUCT MODAL ================= */
+
+        function openProduct(id) {
+
+            selectedProduct =
+                products.find(
+                    product => product.id === id
+                );
+
+
+            if (!selectedProduct) return;
+
+
+            modalImage.innerHTML = `
+
+        <i class="
+            fa-solid
+            ${selectedProduct.icon}
+        "></i>
+
+    `;
+
+
+            modalCategory.textContent =
+                selectedProduct.category
+                    .toUpperCase();
+
+
+            modalTitle.textContent =
+                selectedProduct.name;
+
+
+            modalRating.textContent =
+                `⭐ ${selectedProduct.rating}`;
+
+
+            modalDescription.textContent =
+                selectedProduct.description;
+
+
+            modalPrice.textContent =
+                formatPrice(
+                    selectedProduct.price
+                );
+
+
+            updateModalWishlist();
+
+
+            modal.classList.add("active");
+
+            document.body.style.overflow =
+                "hidden";
+
+        }
+
+
+        function closeModal() {
+
+            modal.classList.remove("active");
+
+            document.body.style.overflow =
+                "";
+
+        }
+
+
+        function updateModalWishlist() {
+
+            const active =
+                wishlist.includes(
+                    selectedProduct.id
+                );
+
+
+            modalWishlist.innerHTML = active
+
+                ? '<i class="fa-solid fa-heart"></i>'
+
+                : '<i class="fa-regular fa-heart"></i>';
+
+        }
+
+
+        modalClose.addEventListener(
+            "click",
+            closeModal
+        );
+
+
+        modal.addEventListener(
+            "click",
+            event => {
+
+                if (
+                    event.target === modal
+                ) {
+
+                    closeModal();
+
+                }
+
+            }
+        );
+
+
+        modalAddCart.addEventListener(
+            "click",
+            () => {
+
+                if (!selectedProduct)
+                    return;
+
+                addToCart(
+                    selectedProduct.id
+                );
+
+                closeModal();
+
+            }
+        );
+
+
+        modalWishlist.addEventListener(
+            "click",
+            () => {
+
+                if (!selectedProduct)
+                    return;
+
+                toggleWishlist(
+                    selectedProduct.id
+                );
+
+                updateModalWishlist();
+
+            }
+        );
+
+
+        /* ================= THEME ================= */
+
+        const savedTheme =
+            localStorage.getItem(
+                "profishop-theme"
+            );
+
+
+        if (savedTheme === "dark") {
+
+            document.body.classList.add(
+                "dark"
+            );
+
+            themeBtn.innerHTML =
+                '<i class="fa-solid fa-sun"></i>';
+
+        }
+
+
+        themeBtn.addEventListener(
+            "click",
+            () => {
+
+                document.body.classList.toggle(
+                    "dark"
+                );
+
+
+                const dark =
+                    document.body.classList.contains(
+                        "dark"
+                    );
+
+
+                localStorage.setItem(
+                    "profishop-theme",
+                    dark ? "dark" : "light"
+                );
+
+
+                themeBtn.innerHTML = dark
+
+                    ? '<i class="fa-solid fa-sun"></i>'
+
+                    : '<i class="fa-solid fa-moon"></i>';
+
+            }
+        );
+
+
+        /* ================= MOBILE MENU ================= */
+
+        menuBtn.addEventListener(
+            "click",
+            () => {
+
+                navbar.classList.toggle(
+                    "active"
+                );
+
+            }
+        );
+
+
+        /* ================= ESCAPE ================= */
+
+        document.addEventListener(
+            "keydown",
+            event => {
+
+                if (event.key === "Escape") {
+
+                    closeModal();
+
+                    closeCartDrawer();
+
+                }
+
+            }
+        );
+
+
+        /* ================= DEAL TIMER ================= */
+
+        const targetDate =
+            new Date();
+
+        targetDate.setDate(
+            targetDate.getDate() + 5
+        );
+
+
+        function updateTimer() {
+
+            const now =
+                new Date().getTime();
+
+            const distance =
+                targetDate.getTime() - now;
+
+
+            if (distance <= 0) return;
+
+
+            const days =
+                Math.floor(
+                    distance /
+                    (1000 * 60 * 60 * 24)
+                );
+
+            const hours =
+                Math.floor(
+                    (distance %
+                        (1000 * 60 * 60 * 24))
+                    /
+                    (1000 * 60 * 60)
+                );
+
+            const minutes =
+                Math.floor(
+                    (distance %
+                        (1000 * 60 * 60))
+                    /
+                    (1000 * 60)
+                );
+
+            const seconds =
+                Math.floor(
+                    (distance %
+                        (1000 * 60))
+                    /
+                    1000
+                );
+
+
+            document.getElementById(
+                "days"
+            ).textContent =
+                String(days).padStart(2, "0");
+
+
+            document.getElementById(
+                "hours"
+            ).textContent =
+                String(hours).padStart(2, "0");
+
+
+            document.getElementById(
+                "minutes"
+            ).textContent =
+                String(minutes).padStart(2, "0");
+
+
+            document.getElementById(
+                "seconds"
+            ).textContent =
+                String(seconds).padStart(2, "0");
+
+        }
+
+
+        setInterval(
+            updateTimer,
+            1000
+        );
+
+        updateTimer();
+
+
+        /* ================= INITIAL LOAD ================= */
+
+        renderProducts();
+
+        updateCart();
+
+        wishlistCount.textContent =
+            wishlist.length;
+    </script>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

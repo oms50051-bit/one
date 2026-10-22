@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A dark streaming dashboard UI demo." />
+  <title>Nightmode — Discover Movies</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="NightFlix home"><span class="brand-mark">N</span> Night<span>mode</span></a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a class="active" href="#home">Home</a>
+      <a href="#movies">Movies</a>
+      <a href="#tv">TV Shows</a>
+      <a href="#watchlist">Watch List <span class="watch-count" id="watchCount">0</span></a>
+    </nav>
+    <div class="header-actions">
+      <label class="search-wrap" aria-label="Search titles">
+        <span>⌕</span><input id="searchInput" type="search" placeholder="Search titles..." />
+      </label>
+      <button class="icon-btn" id="themeBtn" title="Toggle theme" aria-label="Toggle theme">☼</button>
+      <button class="avatar" title="Demo profile">O</button>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-shade">
+        
+      </div>
+      <div class="hero-content">
+        <p class="eyebrow"><span class="live-dot"></span> FEATURED THIS WEEK</p>
+        <p class="hero-kicker">A NIGHTFLIX ORIGINAL</p>
+        <img src="3e1ce356-5185-4ff0-8533-33c8d469f51e._BR-6_AC_SX1000_FMwebp_.webp" alt="">
+        <div class="meta"><span class="rating">★ 8.7</span><span>2026</span><span>2h 08m</span><span class="pill">Sci-Fi</span><span class="pill">Adventure</span></div>
+        <p class="hero-copy">When a mysterious signal arrives from the edge of the galaxy, one crew risks everything to discover what lies beyond the stars.</p>
+        <div class="hero-buttons">
+          <button class="primary-btn" id="watchHero">▶ &nbsp; Watch Trailer</button>
+          <button class="secondary-btn" id="addHero">＋ &nbsp; Add to Watch List</button>
+        </div>
+        <div class="hero-dots"><i class="selected"></i><i></i><i></i><i></i></div>
+      </div>
+      <div class="hero-side-note">NIGHTFLIX <span>•</span> FEATURED</div>
+    </section>
+
+    <section class="catalog" id="movies">
+      <div class="section-heading">
+        <div><p class="section-label">YOUR NEXT OBSESSION</p><h2>Top Movies</h2></div>
+        <a href="#allMovies" class="view-all">View all <span>→</span></a>
+      </div>
+      <div class="filters" id="filters">
+        <button class="filter active" data-filter="All">All</button>
+        <button class="filter" data-filter="Action">Action</button>
+        <button class="filter" data-filter="Drama">Drama</button>
+        <button class="filter" data-filter="Sci-Fi">Sci-Fi</button>
+        <button class="filter" data-filter="Comedy">Comedy</button>
+        <button class="filter" data-filter="Mystery">Mystery</button>
+      </div>
+      <div class="movie-grid" id="movieGrid"></div>
+    </section>
+
+    <section class="catalog" id="tv">
+      <div class="section-heading">
+        <div><p class="section-label">BINGE-WORTHY STORIES</p><h2>Longest Play: Most Popular</h2></div>
+        <a href="#popular" class="view-all">Explore <span>→</span></a>
+      </div>
+      <div class="wide-row" id="popularRow"></div>
+    </section>
+
+    <section class="catalog" id="watchlist">
+      <div class="section-heading">
+        <div><p class="section-label">PICK UP WHERE YOU LEFT OFF</p><h2>Continue Watching</h2></div>
+        <span class="muted" id="continueHint">Your recent titles appear here</span>
+      </div>
+      <div class="wide-row" id="continueRow"></div>
+    </section>
+
+    <section class="newsletter">
+      <div><p class="section-label">STAY IN THE LOOP</p><h2>Good stories. Zero missed moments.</h2><p>Get updates when new titles arrive in this demo catalog.</p></div>
+      <form id="newsletterForm"><input type="email" placeholder="Your email address" required /><button class="primary-btn">Notify me ↗</button></form>
+    </section>
+  </main>
+
+  <footer><a class="brand small" href="#"><span class="brand-mark">N</span> Night<span>Flix</span></a><p>Demo streaming interface · No real movies or streaming links included.</p><div><a href="#home">Home</a><a href="#movies">Browse</a><a href="#watchlist">Watch list</a></div><small>© 2026 NightFlix UI Concept</small></footer>
+
+  <div class="toast" id="toast" role="status"></div>
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-card"><button class="modal-close" id="modalClose" aria-label="Close">×</button><div class="modal-art" id="modalArt"></div><div class="modal-text"><p class="section-label">PREVIEW MODE</p><h2 id="modalTitle">Title</h2><p id="modalDescription"></p><p class="muted">This is a frontend demo. Connect your own licensed video source to enable playback.</p><button class="primary-btn" id="modalAdd">＋ Add to Watch List</button></div></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
